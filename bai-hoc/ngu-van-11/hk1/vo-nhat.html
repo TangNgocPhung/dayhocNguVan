@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vợ Nhặt (Kim Lân) — Câu chuyện và điểm nhìn trong truyện kể</title>
+<style>
+  :root {
+    --primary: #4C8DFF;
+    --primary-dark: #2E6BDB;
+    --primary-light: #E8F0FF;
+    --accent: #F4C542;
+    --accent-dark: #D6A81E;
+    --text-main: #222831;
+    --text-muted: #5A6472;
+    --bg: #FAFBFF;
+    --card-bg: #FFFFFF;
+    --border: #DCE4F5;
+    --correct: #2E9E5B;
+    --correct-bg: #E7F8EE;
+    --incorrect: #D64545;
+    --incorrect-bg: #FDEAEA;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text-main);
+    background: var(--bg);
+  }
+
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px 60px 16px;
+  }
+
+  /* ===== Back navigation ===== */
+  .lesson-nav-bar {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+    text-align: center;
+  }
+
+  .lesson-nav-back {
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--primary-dark);
+    text-decoration: none;
+  }
+
+  .lesson-nav-back:hover {
+    text-decoration: underline;
+  }
+
+  /* ===== Header ===== */
+  header.site-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #fff;
+    padding: 28px 16px 20px 16px;
+    text-align: center;
+  }
+
+  header.site-header .eyebrow {
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin: 0 0 6px 0;
+  }
+
+  header.site-header h1 {
+    margin: 0 0 6px 0;
+    font-size: 30px;
+  }
+
+  header.site-header .subtitle {
+    margin: 0;
+    font-size: 17px;
+    color: var(--accent);
+    font-weight: bold;
+  }
+
+  /* ===== Nav tabs ===== */
+  nav.tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    background: #fff;
+    border-bottom: 3px solid var(--primary-light);
+    padding: 12px 8px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .tab-btn {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    padding: 10px 16px;
+    border: 2px solid var(--primary-light);
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+    min-height: 44px;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .tab-btn:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .tab-btn:focus-visible {
+    outline: 3px solid var(--accent-dark);
+    outline-offset: 2px;
+  }
+
+  .tab-btn.tab-active {
+    background: var(--primary);
+    border-color: var(--primary-dark);
+    color: #fff;
+  }
+
+  /* Progressive enhancement: without JS, all sections show inline (no display:none anywhere by default) */
+  main > section {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  html.js-enabled main > section {
+    display: none;
+  }
+
+  html.js-enabled main > section.active {
+    display: block;
+  }
+
+  section h2 {
+    color: var(--primary-dark);
+    font-size: 24px;
+    border-left: 6px solid var(--accent);
+    padding-left: 12px;
+    margin-top: 0;
+  }
+
+  section h3 {
+    color: var(--primary-dark);
+    font-size: 19px;
+    margin-top: 26px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 14px 0;
+    box-shadow: 0 2px 6px rgba(76, 141, 255, 0.08);
+  }
+
+  .goal-list li {
+    margin-bottom: 8px;
+  }
+
+  .highlight-box {
+    background: var(--primary-light);
+    border-left: 5px solid var(--primary);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .accent-box {
+    background: #FFF9E8;
+    border-left: 5px solid var(--accent-dark);
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin: 16px 0;
+  }
+
+  .quote-block {
+    font-style: italic;
+    color: var(--text-muted);
+    border-left: 4px solid var(--accent);
+    padding-left: 14px;
+    margin: 12px 0;
+  }
+
+  a {
+    color: var(--primary-dark);
+  }
+
+  /* ===== Buttons (generic) ===== */
+  .btn {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--primary);
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .btn:hover:not(:disabled) {
+    background: var(--primary-dark);
+  }
+
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn:focus-visible {
+    outline: 3px solid var(--accent-dark);
+    outline-offset: 2px;
+  }
+
+  .btn-secondary {
+    background: #fff;
+    color: var(--primary-dark);
+  }
+
+  .btn-accent {
+    background: var(--accent);
+    border-color: var(--accent-dark);
+    color: #4a3a00;
+  }
+
+  .btn-accent:hover:not(:disabled) {
+    background: var(--accent-dark);
+  }
+
+  /* ===== Character widget ===== */
+  .char-select-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .char-select-btn {
+    flex: 1 1 150px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    background: #fff;
+    color: var(--primary-dark);
+    cursor: pointer;
+    font-weight: bold;
+    min-height: 44px;
+  }
+
+  .char-select-btn.char-active {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  .char-state-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .char-state-btn {
+    flex: 1;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--accent-dark);
+    background: #fff;
+    color: #4a3a00;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  .char-state-btn.state-btn-active {
+    background: var(--accent);
+  }
+
+  #char-detail-card {
+    border-width: 2px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  #char-detail-card.state-before {
+    border-color: var(--text-muted);
+    background: #F4F5F7;
+  }
+
+  #char-detail-card.state-after {
+    border-color: var(--correct);
+    background: var(--correct-bg);
+  }
+
+  .char-state-label {
+    display: inline-block;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* ===== Timeline widget ===== */
+  .timeline-dots {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 16px 0;
+  }
+
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .timeline-dot.timeline-dot-active {
+    background: var(--accent);
+    border-color: var(--accent-dark);
+  }
+
+  .timeline-nav-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  /* ===== Quiz widget ===== */
+  .quiz-progress-track {
+    background: var(--primary-light);
+    border-radius: 999px;
+    height: 12px;
+    overflow: hidden;
+    margin: 10px 0 18px 0;
+  }
+
+  .quiz-progress-fill {
+    background: var(--accent);
+    height: 100%;
+    width: 0%;
+    transition: width 0.25s ease;
+  }
+
+  .quiz-option-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    background: #fff;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  .quiz-option-btn:hover:not(:disabled) {
+    border-color: var(--primary);
+    background: var(--primary-light);
+  }
+
+  .quiz-option-btn:disabled {
+    cursor: default;
+  }
+
+  .quiz-option-correct {
+    border-color: var(--correct) !important;
+    background: var(--correct-bg) !important;
+    color: var(--correct);
+    font-weight: bold;
+  }
+
+  .quiz-option-incorrect {
+    border-color: var(--incorrect) !important;
+    background: var(--incorrect-bg) !important;
+    color: var(--incorrect);
+    font-weight: bold;
+  }
+
+  .quiz-feedback {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    min-height: 20px;
+  }
+
+  .quiz-feedback-correct {
+    background: var(--correct-bg);
+    color: var(--correct);
+    border-left: 5px solid var(--correct);
+  }
+
+  .quiz-feedback-incorrect {
+    background: var(--incorrect-bg);
+    color: var(--incorrect);
+    border-left: 5px solid var(--incorrect);
+  }
+
+  #quiz-score-live {
+    font-weight: bold;
+    color: var(--primary-dark);
+  }
+
+  .quiz-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #quiz-result {
+    display: none;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #quiz-final-score {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin: 10px 0;
+  }
+
+  /* ===== Caller tool ===== */
+  #caller-name-input {
+    width: 100%;
+    min-height: 120px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    resize: vertical;
+  }
+
+  #caller-result-display {
+    background: var(--primary-light);
+    border: 2px dashed var(--primary);
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin: 14px 0;
+    min-height: 30px;
+  }
+
+  #caller-pool-status {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .caller-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  #caller-history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  #caller-history-list li {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  #caller-history-list li:last-child {
+    border-bottom: none;
+  }
+
+  .caller-history-empty {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ===== Table styling for character before/after tables ===== */
+  table.char-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+  }
+
+  table.char-table th, table.char-table td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  table.char-table th {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+  }
+
+  /* ===== Video embed ===== */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 14px 0;
+    background: #000;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .video-fallback {
+    padding: 14px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  noscript .noscript-banner {
+    display: block;
+    background: var(--accent);
+    color: #4a3a00;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  footer.site-footer {
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 600px) {
+    header.site-header h1 {
+      font-size: 24px;
+    }
+    .tab-btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+    #char-detail-card, .card {
+      padding: 14px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="lesson-nav-bar">
+  <a href="../../ngu-van-11.html" class="lesson-nav-back">← Về danh sách bài giảng Ngữ Văn 11</a>
+</div>
+
+<noscript>
+  <div class="noscript-banner">Trang đang hiển thị ở chế độ không có JavaScript. Nội dung kiến thức, câu hỏi và điều hướng vẫn đầy đủ — chỉ phần chấm điểm tự động và mô phỏng tương tác sẽ không hoạt động.</div>
+</noscript>
+
+<header class="site-header">
+  <p class="eyebrow">Ngữ văn 11 · Văn bản 1</p>
+  <h1>VỢ NHẶT — Kim Lân</h1>
+  <p class="subtitle">Câu chuyện và điểm nhìn trong truyện kể</p>
+</header>
+
+<nav class="tab-nav" aria-label="Điều hướng bài học">
+  <button type="button" class="tab-btn tab-active" data-target="sec-khoidong" aria-selected="true">1. Khởi động</button>
+  <button type="button" class="tab-btn" data-target="sec-mucteu" aria-selected="false">2. Mục tiêu</button>
+  <button type="button" class="tab-btn" data-target="sec-kienthuc" aria-selected="false">3. Kiến thức mới</button>
+  <button type="button" class="tab-btn" data-target="sec-nhanvat" aria-selected="false">4. Mô phỏng nhân vật</button>
+  <button type="button" class="tab-btn" data-target="sec-bocuc" aria-selected="false">5. Bố cục truyện</button>
+  <button type="button" class="tab-btn" data-target="sec-luyentap" aria-selected="false">6. Luyện tập</button>
+  <button type="button" class="tab-btn" data-target="sec-tongket" aria-selected="false">7. Tổng kết</button>
+  <button type="button" class="tab-btn" data-target="sec-giaovien" aria-selected="false">8. Công cụ GV</button>
+</nav>
+
+<main>
+
+  <!-- ============ 1. KHOI DONG ============ -->
+  <section id="sec-khoidong" class="active">
+    <h2>1. Khởi động</h2>
+    <div class="card">
+      <p>Trước khi đọc văn bản, hãy xem đoạn tư liệu ngắn dưới đây về nạn đói năm Ất Dậu (1945) — bối cảnh lịch sử trực tiếp của truyện ngắn <em>Vợ nhặt</em>.</p>
+
+      <div class="video-wrapper" id="video-wrapper">
+        <iframe
+          id="intro-video"
+          src="https://www.youtube.com/embed/RV0gK8Myv_I"
+          title="Tư liệu về nạn đói năm Ất Dậu 1945"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+      </div>
+      <p class="video-fallback">Nếu video không tải được (do mất mạng hoặc chặn nhúng), em có thể xem trực tiếp tại: <a href="https://www.youtube.com/watch?v=RV0gK8Myv_I" target="_blank" rel="noopener noreferrer">youtube.com/watch?v=RV0gK8Myv_I</a>. Nguồn tư liệu: YouTube.</p>
+
+      <div class="highlight-box">
+        <strong>Câu hỏi dự đoán:</strong>
+        <p>Trong hoàn cảnh đói khát cùng cực như vậy, theo em, con người có còn nghĩ đến chuyện lập gia đình, "lấy vợ lấy chồng" hay không? Vì sao?</p>
+        <p><em>Hãy suy nghĩ về câu trả lời của mình, sau đó đọc tiếp để xem Kim Lân đã trả lời câu hỏi này như thế nào qua truyện ngắn "Vợ nhặt".</em></p>
+      </div>
+
+      <div class="accent-box">
+        <strong>Gợi dẫn thêm:</strong> Hãy kể ngắn gọn (trong đầu hoặc với bạn cùng bàn) một câu chuyện về bản năng sinh tồn mà em từng biết hoặc ấn tượng nhất.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. MUC TIEU ============ -->
+  <section id="sec-mucteu">
+    <h2>2. Mục tiêu bài học</h2>
+    <div class="card">
+      <h3>Năng lực đặc thù</h3>
+      <ul class="goal-list">
+        <li><strong>Phân tích</strong> được mối liên hệ giữa nhan đề và nội dung câu chuyện.</li>
+        <li><strong>Xác định và nêu</strong> được ý nghĩa tình huống truyện.</li>
+        <li><strong>Xác định</strong> trình tự kể truyện và bố cục của văn bản.</li>
+        <li><strong>Phân tích</strong> sự thay đổi của các nhân vật từ khía cạnh điểm nhìn, lời kể và giọng điệu.</li>
+        <li><strong>Nêu</strong> chủ đề và đánh giá giá trị tư tưởng của tác phẩm.</li>
+        <li><strong>Viết</strong> được đoạn văn khoảng 150 chữ trình bày suy nghĩ về một thông điệp ý nghĩa trong văn bản.</li>
+      </ul>
+
+      <h3>Năng lực chung</h3>
+      <p>Phát triển tư duy phản biện, năng lực hợp tác, giải quyết vấn đề.</p>
+
+      <h3>Phẩm chất chủ yếu</h3>
+      <p>Bồi đắp sự đồng cảm với con người trong nạn đói, tiếp thêm hi vọng ngay cả trong hoàn cảnh khổ đau.</p>
+    </div>
+  </section>
+
+  <!-- ============ 3. KIEN THUC MOI ============ -->
+  <section id="sec-kienthuc">
+    <h2>3. Kiến thức mới</h2>
+
+    <div class="card">
+      <h3>3.1. Nhan đề và mối liên hệ với nội dung, hoàn cảnh ra đời</h3>
+      <p>Truyện ngắn <em>Vợ nhặt</em> được Kim Lân viết dựa trên bối cảnh nạn đói khủng khiếp năm 1945, khi hơn hai triệu đồng bào ta chết đói "từ cuối năm ngoái đến đầu năm nay". Nhan đề "Vợ nhặt" gắn liền với ba tầng ý nghĩa:</p>
+      <ul>
+        <li>Nỗi khổ của con người trong nạn đói — đến mức việc "có vợ" cũng diễn ra dễ dàng, tình cờ như "nhặt" được một món đồ.</li>
+        <li>Sự đồng cảm, xót xa cho số phận con người bị rẻ rúng trong hoàn cảnh cùng cực.</li>
+        <li>Sự xúc động và trân trọng trước vẻ đẹp tâm hồn, khát khao tin tưởng vào sự sống của những con người trong nạn đói.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>3.2. Tình huống truyện</h3>
+      <p><strong>Tình huống truyện</strong> là hoàn cảnh, sự kiện đặc biệt mà tại đó, đời sống hiện lên đậm đặc nhất và ý đồ tư tưởng của tác giả cũng được bộc lộ sắc nét nhất.</p>
+      <p>Tình huống của <em>Vợ nhặt</em>: Tràng — một người đàn ông nghèo, xấu xí, ế vợ — bỗng nhiên "nhặt" được vợ giữa nạn đói chỉ qua một câu hò đùa vui và bốn bát bánh đúc. Đây là tình huống <strong>vừa lạ vừa éo le</strong>: một chuyện vui (dựng vợ) lại diễn ra giữa một chuyện buồn tột cùng (nạn đói, cái chết rình rập khắp nơi).</p>
+      <div class="highlight-box">
+        <strong>Ý nghĩa tình huống truyện:</strong> Tình huống này vừa tố cáo tội ác của thực dân, phát xít đã gây ra nạn đói, vừa là cái nền để nhà văn bộc lộ vẻ đẹp tâm hồn và khát vọng sống của con người ngay giữa bờ vực cái chết.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>3.3. Trình tự kể và bố cục</h3>
+      <p>Truyện được kể theo <strong>trình tự thời gian</strong>, có thể chia làm ba đoạn để thấy rõ sự thay đổi của các nhân vật (xem chi tiết ở mục <strong>5. Bố cục truyện</strong>):</p>
+      <ol>
+        <li>Sự hiện diện bất ngờ của người "vợ nhặt" trong con mắt dân xóm ngụ cư.</li>
+        <li>Tràng nhớ lại cơ duyên gặp người "vợ nhặt" và đưa vợ ra mắt bà cụ Tứ.</li>
+        <li>Cuộc sống gia đình Tràng vào buổi sáng đầu tiên có thêm thành viên mới.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h3>3.4. Điểm nhìn, lời kể và giọng điệu — hình tượng nhân vật thay đổi ra sao?</h3>
+      <p>Đây là nội dung <strong>trọng tâm</strong> của bài học. Khi phân tích một truyện kể, ta cần phân biệt:</p>
+      <ul>
+        <li><strong>Điểm nhìn (point of view):</strong> vị trí mà từ đó người kể chuyện quan sát và kể lại sự việc, nhân vật — có thể từ bên ngoài (khách quan) hoặc đi sâu vào nội tâm nhân vật.</li>
+        <li><strong>Lời kể / giọng điệu:</strong> cách người kể chuyện dùng từ ngữ, sắc thái biểu cảm để truyền tải thái độ, cảm xúc đối với điều được kể.</li>
+      </ul>
+      <p>Trong <em>Vợ nhặt</em>, cả ba nhân vật chính — Tràng, cô "vợ nhặt", bà cụ Tứ — đều được kể theo một quy luật chung: từ dáng vẻ bên ngoài, hoàn cảnh khổ cực (trước biến cố) → đến những chuyển biến tinh tế trong nội tâm, đầy hi vọng (sau biến cố, vào buổi sáng hôm sau).</p>
+      <p><strong>Hãy khám phá sự thay đổi này qua mô phỏng tương tác ở mục 4 bên dưới.</strong></p>
+    </div>
+
+    <div class="card">
+      <h3>3.5. Chủ đề và tư tưởng</h3>
+      <p><strong>a. Chủ đề:</strong> Tác phẩm phản ánh chân thực hình ảnh nông thôn Việt Nam trong nạn đói 1945 — không khí chết chóc bao trùm khắp nơi ("không ngày nào đi làm đồng về không gặp 3, 4 cái thây nằm còng queo bên đường") — đồng thời thể hiện niềm thương cảm sâu sắc cho số phận con người bé mọn, bèo bọt như cỏ rác giữa nạn đói.</p>
+      <p><strong>b. Tư tưởng:</strong> Cái đói, cái chết càng khiến con người lao động ngời lên những phẩm chất tốt đẹp — lòng nhân hậu, tình yêu thương vị tha, khát khao sống, khát khao hạnh phúc và niềm tin mãnh liệt vào tương lai. Đây chính là <strong>cảm hứng nhân đạo</strong> bao trùm toàn bộ tác phẩm.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4. MO PHONG NHAN VAT (CORE INTERACTIVE 1) ============ -->
+  <section id="sec-nhanvat">
+    <h2>4. Mô phỏng: Sự thay đổi của nhân vật qua điểm nhìn và giọng điệu</h2>
+    <div class="card">
+      <p><strong>Nhiệm vụ:</strong> Chọn một nhân vật, sau đó bấm "Trước" / "Sau" để xem hình tượng nhân vật đó thay đổi như thế nào qua điểm nhìn và giọng kể của Kim Lân — từ trước biến cố "nhặt vợ" đến buổi sáng hôm sau.</p>
+      <p><strong>Dự đoán trước khi thử:</strong> Trước khi bấm, hãy đoán xem giọng điệu kể chuyện sẽ thay đổi theo hướng nào — bi quan hơn hay ấm áp, hi vọng hơn?</p>
+
+      <div class="char-select-row" role="group" aria-label="Chọn nhân vật">
+        <button type="button" class="char-select-btn char-active" data-char="trang" aria-pressed="true">Tràng</button>
+        <button type="button" class="char-select-btn" data-char="voNhat" aria-pressed="false">Cô "vợ nhặt"</button>
+        <button type="button" class="char-select-btn" data-char="baCuTu" aria-pressed="false">Bà cụ Tứ</button>
+      </div>
+
+      <div class="char-state-row" role="group" aria-label="Chọn thời điểm">
+        <button type="button" class="char-state-btn state-btn-active" data-state="before" aria-pressed="true">Trước</button>
+        <button type="button" class="char-state-btn" data-state="after" aria-pressed="false">Sau</button>
+      </div>
+
+      <div class="card" id="char-detail-card">
+        <span class="char-state-label" id="char-state-label">TRƯỚC khi nhặt vợ / trước biến cố</span>
+        <h3 id="char-name-display">Tràng</h3>
+        <p><strong>Ngoại hình / hành động / tâm trạng:</strong></p>
+        <p id="char-appearance">—</p>
+        <p><strong>Điểm nhìn, lời kể, giọng điệu:</strong></p>
+        <p id="char-narration">—</p>
+        <p class="quote-block" id="char-quote">—</p>
+      </div>
+
+      <button type="button" class="btn btn-secondary" id="char-reset-btn">Đặt lại mô phỏng</button>
+
+      <div class="accent-box" style="margin-top:18px;">
+        <strong>Câu hỏi kết luận:</strong> Sau khi khám phá cả ba nhân vật, em có nhận xét gì về hướng chuyển biến chung trong điểm nhìn và giọng điệu trần thuật của Kim Lân? Điều đó nói lên tư tưởng gì của nhà văn?
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. BO CUC TRUYEN (CORE INTERACTIVE 2) ============ -->
+  <section id="sec-bocuc">
+    <h2>5. Mô phỏng: Trình tự kể và bố cục truyện</h2>
+    <div class="card">
+      <p><strong>Nhiệm vụ:</strong> Dùng nút điều hướng hoặc bấm vào các chấm tròn để đi qua ba đoạn của truyện theo đúng trình tự kể.</p>
+      <p><strong>Dự đoán trước khi thử:</strong> Truyện có kể theo đúng trình tự thời gian từ đầu đến cuối không, hay có đoạn nào "quay ngược" lại quá khứ?</p>
+
+      <p id="timeline-progress-label" style="font-weight:bold; color:var(--primary-dark);">Đoạn 1 / 3</p>
+
+      <div class="card">
+        <h3 id="timeline-title">—</h3>
+        <p style="color:var(--text-muted); font-size:14px;" id="timeline-time">—</p>
+        <p id="timeline-content">—</p>
+      </div>
+
+      <div class="timeline-dots" role="group" aria-label="Chọn đoạn truyện">
+        <button type="button" class="timeline-dot timeline-dot-active" aria-label="Đoạn 1"><span class="sr-only">1</span></button>
+        <button type="button" class="timeline-dot" aria-label="Đoạn 2"><span class="sr-only">2</span></button>
+        <button type="button" class="timeline-dot" aria-label="Đoạn 3"><span class="sr-only">3</span></button>
+      </div>
+
+      <div class="timeline-nav-row">
+        <button type="button" class="btn btn-secondary" id="timeline-prev-btn" disabled>← Đoạn trước</button>
+        <button type="button" class="btn" id="timeline-next-btn">Đoạn sau →</button>
+      </div>
+
+      <div class="accent-box" style="margin-top:18px;">
+        <strong>Giải thích kết quả:</strong> Truyện kể theo trình tự thời gian tuyến tính, chỉ xen một đoạn hồi tưởng ngắn (Tràng nhớ lại cơ duyên gặp vợ) trong Đoạn 2, trước khi mạch truyện quay về hiện tại. Đây là cách tổ chức trần thuật khá phổ biến trong văn xuôi hiện thực giai đoạn 1930–1945.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. LUYEN TAP ============ -->
+  <section id="sec-luyentap">
+    <h2>6. Luyện tập</h2>
+    <div class="card" id="quiz-body">
+      <div class="quiz-header-row">
+        <span id="quiz-progress-label">Câu 1 / 5</span>
+        <span id="quiz-score-live">Điểm: 0 / 5</span>
+      </div>
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="quiz-progress-bar"></div>
+      </div>
+
+      <h3 id="quiz-question-text">Đang tải câu hỏi...</h3>
+      <div id="quiz-options-container">
+        <p>Đang tải các phương án trả lời...</p>
+      </div>
+
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+
+      <div class="timeline-nav-row" style="margin-top:18px;">
+        <button type="button" class="btn btn-secondary" id="quiz-restart-btn">Làm lại</button>
+        <button type="button" class="btn" id="quiz-next-btn" disabled>Câu tiếp theo</button>
+      </div>
+    </div>
+
+    <div class="card" id="quiz-result">
+      <h3>Kết quả luyện tập</h3>
+      <div id="quiz-final-score">0 / 5</div>
+      <p id="quiz-final-message"></p>
+      <button type="button" class="btn" id="quiz-result-restart-btn">Làm lại từ đầu</button>
+    </div>
+  </section>
+
+  <!-- ============ 7. TONG KET ============ -->
+  <section id="sec-tongket">
+    <h2>7. Tổng kết kiến thức</h2>
+    <div class="card">
+      <ul class="goal-list">
+        <li><strong>Nhan đề "Vợ nhặt"</strong> phản ánh nỗi khổ và thân phận con người bị rẻ rúng trong nạn đói năm 1945, đồng thời gợi sự đồng cảm, trân trọng trước khát vọng sống của họ.</li>
+        <li><strong>Tình huống truyện</strong> độc đáo, éo le: chuyện dựng vợ diễn ra dễ dàng giữa hoàn cảnh đói khát cùng cực — vừa tố cáo hiện thực, vừa tôn vinh vẻ đẹp con người.</li>
+        <li><strong>Trình tự kể</strong> theo thời gian tuyến tính, có một đoạn hồi tưởng ngắn; <strong>bố cục</strong> ba phần gắn với ba thời điểm: chiều hôm đó → tối hôm đó → sáng hôm sau.</li>
+        <li><strong>Điểm nhìn, lời kể, giọng điệu</strong> có sự chuyển biến rõ rệt ở cả ba nhân vật (Tràng, cô vợ nhặt, bà cụ Tứ): từ khổ cực, dửng dưng sang ấm áp, đầy hi vọng — thể hiện <strong>cảm hứng nhân đạo</strong> của Kim Lân.</li>
+        <li><strong>Chủ đề và tư tưởng:</strong> giữa nạn đói, con người vẫn ngời lên phẩm chất tốt đẹp, khát khao hạnh phúc và niềm tin vào tương lai.</li>
+      </ul>
+
+      <div class="highlight-box">
+        <strong>Điểm luyện tập của em:</strong> <span id="summary-quiz-score-display">Hãy hoàn thành phần Luyện tập ở mục 6 để xem điểm tại đây.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. CONG CU GIAO VIEN ============ -->
+  <section id="sec-giaovien">
+    <h2>8. Công cụ giáo viên — Vòng quay gọi học sinh</h2>
+    <div class="card">
+      <p>Nhập danh sách học sinh (mỗi tên một dòng), sau đó bấm "Nạp danh sách" và "Quay ngẫu nhiên" để gọi tên. Học sinh đã được gọi sẽ không lặp lại cho đến khi đặt lại lượt gọi.</p>
+
+      <label for="caller-name-input"><strong>Danh sách học sinh (mỗi tên một dòng):</strong></label><br>
+      <textarea id="caller-name-input" placeholder="Nguyễn Văn A&#10;Trần Thị B&#10;Lê Văn C"></textarea>
+
+      <div class="caller-btn-row">
+        <button type="button" class="btn btn-secondary" id="caller-load-btn">Nạp danh sách</button>
+        <button type="button" class="btn btn-accent" id="caller-spin-btn">Quay ngẫu nhiên</button>
+        <button type="button" class="btn btn-secondary" id="caller-reset-btn">Đặt lại lượt gọi</button>
+      </div>
+
+      <p id="caller-pool-status">Chưa có danh sách học sinh. Hãy nhập danh sách bên trên.</p>
+
+      <div id="caller-result-display">—</div>
+
+      <h3>Lịch sử đã gọi</h3>
+      <ul id="caller-history-list">
+        <li class="caller-history-empty">Chưa có lượt gọi nào.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Ngữ văn 11 · Vợ Nhặt (Kim Lân) · Chủ đề: Câu chuyện và điểm nhìn trong truyện kể</p>
+</footer>
+
+<!-- SCRIPT 1: DIEU HUONG -->
+<script>
+// ============ SCRIPT 1: ĐIỀU HƯỚNG / KHỞI ĐỘNG ============
+(function () {
+  'use strict';
+
+  function initNav() {
+    try {
+      var tabButtons = document.querySelectorAll('.tab-btn');
+      var sections = document.querySelectorAll('main > section');
+
+      if (!tabButtons || tabButtons.length === 0) return;
+
+      tabButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          try {
+            var targetId = btn.getAttribute('data-target');
+            if (!targetId) return;
+            var targetSection = document.getElementById(targetId);
+            if (!targetSection) return;
+
+            sections.forEach(function (sec) {
+              sec.classList.remove('active');
+            });
+            targetSection.classList.add('active');
+
+            tabButtons.forEach(function (b) {
+              b.classList.remove('tab-active');
+              b.setAttribute('aria-selected', 'false');
+            });
+            btn.classList.add('tab-active');
+            btn.setAttribute('aria-selected', 'true');
+
+            if (typeof targetSection.scrollIntoView === 'function') {
+              targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          } catch (innerErr) {
+            console.error('Loi khi chuyen tab:', innerErr);
+          }
+        });
+      });
+
+      // Bao gio JS chay xong buoc nay, moi nang cap giao dien thanh dang tab
+      document.documentElement.classList.add('js-enabled');
+    } catch (err) {
+      console.error('Loi khoi tao dieu huong:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();
+
+</script>
+
+<!-- SCRIPT 2: MO PHONG NHAN VAT -->
+<script>
+// ============ SCRIPT 2: MO PHONG NHAN VAT (Truoc / Sau) ============
+(function () {
+  'use strict';
+
+  var CHAR_DATA = {
+    trang: {
+      name: 'Tràng',
+      before: {
+        appearance: 'Nghèo khổ, xấu xí, thô kệch, sống cùng người mẹ già nua trong xóm ngụ cư. Không ai nghĩ Tràng có thể "có được" vợ.',
+        narration: 'Người kể chuyện nhìn Tràng bằng giọng dửng dưng, khách quan, gắn liền với hoàn cảnh tối tăm, đói khát của xóm ngụ cư.',
+        quote: '"Hắn bước ngật ngưỡng, vừa đi vừa tủm tỉm cười, hai bên má hóp lại..."'
+      },
+      after: {
+        appearance: 'Tràng như đổi khác. Hắn cười nhiều hơn, có những cảm giác mới mẻ, trỗi dậy tình nghĩa khi đi bên vợ; nhận ra sự thay đổi ở vợ, muốn sống cho nên người để lo cho gia đình.',
+        narration: 'Điểm nhìn dịch chuyển vào nội tâm nhân vật; giọng kể ấm áp, tin yêu hơn — đặc biệt ở chi tiết Tràng hình dung lá cờ đỏ sao vàng và đoàn người phá kho thóc trên đê, như một biểu tượng của sự đổi đời.',
+        quote: '"Trong óc Tràng vẫn thấy đám người đói và lá cờ đỏ bay phấp phới..."'
+      }
+    },
+    voNhat: {
+      name: 'Cô "vợ nhặt"',
+      before: {
+        appearance: 'Tình cảnh thê thảm, đói khát, ê chề, không việc làm, không biết bám víu vào đâu để sống; ăn nói chao chát, chỏng lỏn; thái độ sừng sộ, chẳng kể gì thể diện — gạ ăn một cách trơ trẽn, ăn rất tham, rất thô.',
+        narration: 'Người kể chuyện miêu tả bằng cái nhìn xót xa nhưng cũng thẳng thắn, không né tránh sự trần trụi của cái đói khiến con người mất đi ý thức về thể diện.',
+        quote: '"Thị vục đầu ăn một chặp bốn bát bánh đúc liền chẳng chuyện trò gì."'
+      },
+      after: {
+        appearance: 'Chị trở thành một con người khác. Đi bên Tràng, bước chân rón rén, ngượng nghịu, e thẹn, ngại ngùng trước ánh mắt tò mò của người lạ. Khi về nhà Tràng, chị càng bối rối, bần thần nghĩ ngợi, dù vẫn còn cảm giác xa lạ nhưng đã có những lời nói, cử chỉ biểu hiện thiên chức làm vợ — cùng mẹ chồng quét tước, dọn dẹp, vun đắp tổ ấm.',
+        narration: 'Điểm nhìn và giọng kể chuyển sang trân trọng, tinh tế hơn — người kể như đang lặng lẽ quan sát sự hồi sinh của ý thức làm người, làm vợ trong một con người tưởng chừng đã bị cái đói tước đoạt hết phẩm giá.',
+        quote: '"Thị cắp cái rổ, theo sau Tràng vào xóm ngụ cư... ngượng nghịu, chân nọ bước díu cả vào chân kia."'
+      }
+    },
+    baCuTu: {
+      name: 'Bà cụ Tứ',
+      before: {
+        appearance: '"Lọng khọng đi vào ngõ, vừa đi vừa lẩm bẩm tính toán gì trong miệng", khuôn mặt bủng beo u ám như vỏ quả chanh. Bà nghĩ đến ông lão, nghĩ đến đứa con gái út, nghĩ đến cuộc đời khổ cực dằng dặc của mình.',
+        narration: 'Giọng kể trầm buồn, điểm nhìn hướng vào dòng hồi tưởng và nỗi lo âu của một người mẹ già trong cảnh đói kém.',
+        quote: '"Bà lão phấp phỏng bước vào trong nhà..."'
+      },
+      after: {
+        appearance: 'Khi biết Tràng có vợ: ngạc nhiên, rồi vừa đau đớn, tủi cực, xót xa xen lẫn vui mừng. Sau đó, khuôn mặt rạng rỡ hẳn lên, cùng con dâu dọn dẹp nhà cửa, dặn dò các con, có niềm tin vào tương lai, dự cảm đổi đời (chú ý chi tiết "nồi chè khoán").',
+        narration: 'Giọng kể chuyển từ trầm buồn sang ấm áp, đầy hi vọng dù vẫn cài thêm dư vị đắng chát (bữa cơm ngày đói với cháo cám) — cho thấy niềm tin của bà cụ Tứ không tách rời hiện thực nghiệt ngã của nạn đói năm 1945.',
+        quote: '"Bà lão nhẹ nhõm, tươi tỉnh khác ngày thường, cái mặt bủng beo u ám của bà rạng rỡ hẳn lên."'
+      }
+    }
+  };
+
+  var currentChar = 'trang';
+  var currentState = 'before';
+
+  function qs(id) {
+    return document.getElementById(id);
+  }
+
+  function renderCharacter() {
+    try {
+      var data = CHAR_DATA[currentChar];
+      if (!data) return;
+      var stateData = data[currentState];
+      if (!stateData) return;
+
+      var nameEl = qs('char-name-display');
+      var appearanceEl = qs('char-appearance');
+      var narrationEl = qs('char-narration');
+      var quoteEl = qs('char-quote');
+      var stateLabel = qs('char-state-label');
+
+      if (nameEl) nameEl.textContent = data.name;
+      if (appearanceEl) appearanceEl.textContent = stateData.appearance;
+      if (narrationEl) narrationEl.textContent = stateData.narration;
+      if (quoteEl) quoteEl.textContent = stateData.quote;
+      if (stateLabel) {
+        stateLabel.textContent = currentState === 'before' ? 'TRƯỚC khi nhặt vợ / trước biến cố' : 'SAU khi nhặt vợ / buổi sáng hôm sau';
+      }
+
+      var card = qs('char-detail-card');
+      if (card) {
+        card.classList.remove('state-before', 'state-after');
+        card.classList.add(currentState === 'before' ? 'state-before' : 'state-after');
+      }
+    } catch (err) {
+      console.error('Loi khi hien thi nhan vat:', err);
+    }
+  }
+
+  function initCharacterWidget() {
+    try {
+      var charButtons = document.querySelectorAll('.char-select-btn');
+      var stateButtons = document.querySelectorAll('.char-state-btn');
+
+      if (!charButtons || charButtons.length === 0) return;
+
+      charButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          try {
+            var key = btn.getAttribute('data-char');
+            if (!key || !CHAR_DATA[key]) return;
+            currentChar = key;
+
+            charButtons.forEach(function (b) {
+              b.classList.remove('char-active');
+              b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('char-active');
+            btn.setAttribute('aria-pressed', 'true');
+
+            renderCharacter();
+          } catch (innerErr) {
+            console.error('Loi chon nhan vat:', innerErr);
+          }
+        });
+      });
+
+      stateButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          try {
+            var state = btn.getAttribute('data-state');
+            if (state !== 'before' && state !== 'after') return;
+            currentState = state;
+
+            stateButtons.forEach(function (b) {
+              b.classList.remove('state-btn-active');
+              b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('state-btn-active');
+            btn.setAttribute('aria-pressed', 'true');
+
+            renderCharacter();
+          } catch (innerErr) {
+            console.error('Loi chuyen trang thai:', innerErr);
+          }
+        });
+      });
+
+      var resetBtn = qs('char-reset-btn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          try {
+            currentChar = 'trang';
+            currentState = 'before';
+
+            charButtons.forEach(function (b) {
+              b.classList.remove('char-active');
+              b.setAttribute('aria-pressed', 'false');
+            });
+            var trangBtn = document.querySelector('.char-select-btn[data-char="trang"]');
+            if (trangBtn) {
+              trangBtn.classList.add('char-active');
+              trangBtn.setAttribute('aria-pressed', 'true');
+            }
+
+            stateButtons.forEach(function (b) {
+              b.classList.remove('state-btn-active');
+              b.setAttribute('aria-pressed', 'false');
+            });
+            var beforeBtn = document.querySelector('.char-state-btn[data-state="before"]');
+            if (beforeBtn) {
+              beforeBtn.classList.add('state-btn-active');
+              beforeBtn.setAttribute('aria-pressed', 'true');
+            }
+
+            renderCharacter();
+          } catch (innerErr) {
+            console.error('Loi dat lai mo phong nhan vat:', innerErr);
+          }
+        });
+      }
+
+      renderCharacter();
+    } catch (err) {
+      console.error('Loi khoi tao mo phong nhan vat:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCharacterWidget);
+  } else {
+    initCharacterWidget();
+  }
+})();
+
+</script>
+
+<!-- SCRIPT 3: MO PHONG BO CUC -->
+<script>
+// ============ SCRIPT 3: MO PHONG BO CUC / TRINH TU KE ============
+(function () {
+  'use strict';
+
+  var TIMELINE_DATA = [
+    {
+      id: 1,
+      title: 'Đoạn 1: Buổi chiều Tràng dẫn vợ về xóm ngụ cư',
+      time: 'Thời điểm kể: hiện tại (chiều hôm ấy)',
+      content: 'Sự hiện diện bất ngờ của người "vợ nhặt" trong con mắt ngạc nhiên, tò mò của dân xóm ngụ cư. Đây là tình huống truyện được đặt ra ngay từ đầu: vì sao một người đàn ông nghèo, xấu lại "nhặt" được vợ giữa nạn đói?'
+    },
+    {
+      id: 2,
+      title: 'Đoạn 2: Hồi tưởng và ra mắt bà cụ Tứ',
+      time: 'Thời điểm kể: quá khứ gần (hồi tưởng) → hiện tại (buổi tối)',
+      content: 'Tràng nhớ lại cơ duyên gặp gỡ người "vợ nhặt" (câu hò đùa vui, bốn bát bánh đúc). Mạch truyện quay về hiện tại khi hai người về đến nhà và Tràng giới thiệu vợ với mẹ.'
+    },
+    {
+      id: 3,
+      title: 'Đoạn 3: Buổi sáng đầu tiên có thêm thành viên mới',
+      time: 'Thời điểm kể: sáng hôm sau',
+      content: 'Cuộc sống gia đình Tràng đổi khác: căn nhà được dọn dẹp, bữa cơm ngày đói với nồi cháo cám, và hình ảnh lá cờ đỏ sao vàng hiện lên trong tâm trí Tràng — mở ra dự cảm về một tương lai khác.'
+    }
+  ];
+
+  var currentStep = 0;
+
+  function qs(id) {
+    return document.getElementById(id);
+  }
+
+  function renderTimeline() {
+    try {
+      var data = TIMELINE_DATA[currentStep];
+      if (!data) return;
+
+      var titleEl = qs('timeline-title');
+      var timeEl = qs('timeline-time');
+      var contentEl = qs('timeline-content');
+      var progressEl = qs('timeline-progress-label');
+      var prevBtn = qs('timeline-prev-btn');
+      var nextBtn = qs('timeline-next-btn');
+
+      if (titleEl) titleEl.textContent = data.title;
+      if (timeEl) timeEl.textContent = data.time;
+      if (contentEl) contentEl.textContent = data.content;
+      if (progressEl) progressEl.textContent = 'Đoạn ' + (currentStep + 1) + ' / ' + TIMELINE_DATA.length;
+
+      if (prevBtn) prevBtn.disabled = currentStep === 0;
+      if (nextBtn) nextBtn.disabled = currentStep === TIMELINE_DATA.length - 1;
+
+      var dots = document.querySelectorAll('.timeline-dot');
+      dots.forEach(function (dot, idx) {
+        if (idx === currentStep) {
+          dot.classList.add('timeline-dot-active');
+        } else {
+          dot.classList.remove('timeline-dot-active');
+        }
+      });
+    } catch (err) {
+      console.error('Loi hien thi dong thoi gian:', err);
+    }
+  }
+
+  function initTimeline() {
+    try {
+      var prevBtn = qs('timeline-prev-btn');
+      var nextBtn = qs('timeline-next-btn');
+      var dots = document.querySelectorAll('.timeline-dot');
+
+      if (!prevBtn && !nextBtn && (!dots || dots.length === 0)) return;
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          try {
+            if (currentStep > 0) {
+              currentStep -= 1;
+              renderTimeline();
+            }
+          } catch (innerErr) {
+            console.error('Loi lui doan:', innerErr);
+          }
+        });
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          try {
+            if (currentStep < TIMELINE_DATA.length - 1) {
+              currentStep += 1;
+              renderTimeline();
+            }
+          } catch (innerErr) {
+            console.error('Loi tien doan:', innerErr);
+          }
+        });
+      }
+
+      dots.forEach(function (dot, idx) {
+        dot.addEventListener('click', function () {
+          try {
+            currentStep = idx;
+            renderTimeline();
+          } catch (innerErr) {
+            console.error('Loi chon doan:', innerErr);
+          }
+        });
+      });
+
+      renderTimeline();
+    } catch (err) {
+      console.error('Loi khoi tao dong thoi gian:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTimeline);
+  } else {
+    initTimeline();
+  }
+})();
+
+</script>
+
+<!-- SCRIPT 4: LUYEN TAP -->
+<script>
+// ============ SCRIPT 4: LUYEN TAP (QUIZ) ============
+(function () {
+  'use strict';
+
+  var QUIZ_DATA = [
+    {
+      question: 'Nhan đề "Vợ nhặt" gợi liên hệ trực tiếp đến điều gì trong nội dung tác phẩm?',
+      options: [
+        'Tràng lấy được vợ một cách trang trọng, đúng lễ nghi cưới hỏi truyền thống',
+        'Tràng có được vợ một cách rất dễ dàng, tình cờ giữa nạn đói — như thể "nhặt" được người, phản ánh thân phận con người bị rẻ rúng trong nạn đói',
+        'Người vợ chủ động đi tìm và lựa chọn Tràng làm chồng sau một thời gian tìm hiểu',
+        'Gia đình hai bên tổ chức mai mối cho Tràng và người vợ'
+      ],
+      correctIndex: 1,
+      explanationCorrect: 'Đúng. Nhan đề "Vợ nhặt" phản ánh đúng tình huống truyện: Tràng "có" vợ chỉ qua một câu hò đùa vui và bốn bát bánh đúc — cho thấy trong nạn đói, ngay cả chuyện hệ trọng như hôn nhân cũng trở nên rẻ rúng, bấp bênh.',
+      explanationIncorrect: 'Chưa đúng. Từ "nhặt" trong nhan đề chính là chi tiết đắt giá nhất: nó cho thấy sự dễ dàng đến mức bất thường của việc Tràng có vợ, gắn liền với bối cảnh nạn đói năm 1945, chứ không phải một cuộc hôn nhân được chuẩn bị hay lựa chọn kỹ càng.'
+    },
+    {
+      question: 'Trình tự kể của truyện "Vợ nhặt" được tổ chức theo cách nào?',
+      options: [
+        'Kể ngược hoàn toàn từ hiện tại về quá khứ xa',
+        'Kể theo trình tự thời gian, có xen một đoạn hồi tưởng (Tràng nhớ lại cơ duyên gặp vợ) rồi trở về hiện tại',
+        'Kể đan xen liên tục giữa nhiều điểm nhìn nhân vật khác nhau trong từng câu văn',
+        'Kể theo hình thức nhật ký của nhân vật Tràng'
+      ],
+      correctIndex: 1,
+      explanationCorrect: 'Đúng. Truyện kể theo trình tự thời gian tuyến tính (chiều hôm đó → tối hôm đó → sáng hôm sau), nhưng có một đoạn hồi tưởng xen vào khi Tràng nhớ lại việc gặp gỡ người vợ nhặt, trước khi mạch truyện quay lại hiện tại.',
+      explanationIncorrect: 'Chưa đúng. Truyện về cơ bản kể theo trình tự thời gian (từ chiều đến sáng hôm sau), chỉ xen một đoạn hồi tưởng ngắn về cơ duyên gặp gỡ, chứ không đảo ngược hoàn toàn thời gian hay đan xen điểm nhìn liên tục.'
+    },
+    {
+      question: 'Qua lời kể vào buổi sáng hôm sau, điểm nhìn của người kể chuyện đối với nhân vật Tràng có sự thay đổi như thế nào?',
+      options: [
+        'Vẫn giữ nguyên giọng dửng dưng, khách quan như phần đầu truyện',
+        'Chuyển sang giọng mỉa mai, phê phán nhân vật',
+        'Dịch chuyển vào nội tâm nhân vật, giọng kể ấm áp hơn, thể hiện những cảm giác mới mẻ và niềm hi vọng trỗi dậy trong Tràng',
+        'Người kể hoàn toàn biến mất, để nhân vật tự kể chuyện mình'
+      ],
+      correctIndex: 2,
+      explanationCorrect: 'Đúng. Vào buổi sáng hôm sau, điểm nhìn trần thuật tiến sâu vào nội tâm Tràng — thể hiện qua những cảm giác "mới mẻ", "trỗi dậy tình nghĩa", và hình ảnh lá cờ đỏ sao vàng hiện lên trong óc Tràng như biểu tượng của khát vọng đổi đời.',
+      explanationIncorrect: 'Chưa đúng. Đây chính là điểm khác biệt rõ nhất so với đoạn đầu: điểm nhìn không còn dừng ở dáng vẻ bên ngoài (ngật ngưỡng, tủm tỉm cười một mình) mà đi sâu vào những chuyển biến tinh tế trong tâm hồn nhân vật.'
+    },
+    {
+      question: 'Chi tiết "nồi chè khoán" (thực chất là cháo cám) trong bữa cơm ngày đói có ý nghĩa gì?',
+      options: [
+        'Chỉ đơn thuần miêu tả món ăn đặc sản của vùng quê Bắc Bộ',
+        'Cho thấy gia đình Tràng thực ra rất sung túc, dư dả lương thực',
+        'Vừa là hình ảnh thu nhỏ của hiện thực đói nghèo năm 1945, vừa cho thấy nỗ lực của bà cụ Tứ trong việc thắp lên không khí ấm áp, hi vọng giữa cảnh khốn cùng',
+        'Là chi tiết không liên quan đến chủ đề chính của tác phẩm'
+      ],
+      correctIndex: 2,
+      explanationCorrect: 'Đúng. Chi tiết "nồi chè khoán" vừa mang dư vị đắng chát của hiện thực đói khổ (đến mức phải ăn cháo cám), vừa thể hiện tấm lòng bà cụ Tứ cố gắng tạo không khí vui vẻ cho bữa cơm đầu tiên đón con dâu — hội tụ cả cảm hứng hiện thực và nhân đạo của tác phẩm.',
+      explanationIncorrect: 'Chưa đúng. Đây là một trong những chi tiết giàu ý nghĩa nhất của truyện: nó vừa tố cáo hiện thực nạn đói khủng khiếp, vừa là biểu hiện của tình yêu thương, sự cố gắng vun đắp hạnh phúc gia đình ngay giữa hoàn cảnh ngặt nghèo nhất.'
+    },
+    {
+      question: 'Sự thay đổi giọng điệu và điểm nhìn khi kể về ba nhân vật (Tràng, cô vợ nhặt, bà cụ Tứ) vào buổi sáng hôm sau, xét trên cả ba nhân vật, thể hiện điều gì về tư tưởng của Kim Lân?',
+      options: [
+        'Con người, dù trong hoàn cảnh đói khổ cùng cực, vẫn ánh lên khát vọng sống, khát vọng hạnh phúc và niềm tin vào tương lai — đó là cảm hứng nhân đạo bao trùm tác phẩm',
+        'Nạn đói là điều không thể vượt qua nên các nhân vật đều rơi vào bi quan, tuyệt vọng',
+        'Tác giả chỉ quan tâm phản ánh hiện thực đói nghèo mà không đề cập đến đời sống tinh thần nhân vật',
+        'Mỗi nhân vật thay đổi theo một hướng hoàn toàn khác nhau, không có điểm chung nào'
+      ],
+      correctIndex: 0,
+      explanationCorrect: 'Đúng. Cả ba nhân vật — Tràng, cô vợ nhặt, bà cụ Tứ — đều có chung một hướng chuyển biến: từ đau khổ, tủi cực sang những cảm xúc ấm áp, hi vọng. Đây chính là biểu hiện tập trung của cảm hứng nhân đạo: dù đói, dù chết chóc rình rập, con người lao động vẫn ngời lên phẩm chất tốt đẹp và niềm tin vào tương lai.',
+      explanationIncorrect: 'Chưa đúng. Điểm chung dễ nhận thấy nhất qua sự thay đổi của cả ba nhân vật là: cái đói không dập tắt được khát vọng sống và niềm tin vào ngày mai — đây là tư tưởng nhân đạo cốt lõi mà Kim Lân gửi gắm qua nghệ thuật trần thuật của tác phẩm.'
+    }
+  ];
+
+  var currentQuestion = 0;
+  var score = 0;
+  var answered = [];
+  var selectedIndex = null;
+
+  function qs(id) {
+    return document.getElementById(id);
+  }
+
+  function renderQuestion() {
+    try {
+      var data = QUIZ_DATA[currentQuestion];
+      if (!data) return;
+
+      var questionEl = qs('quiz-question-text');
+      var optionsContainer = qs('quiz-options-container');
+      var progressLabel = qs('quiz-progress-label');
+      var progressBar = qs('quiz-progress-bar');
+      var feedbackEl = qs('quiz-feedback');
+      var nextBtn = qs('quiz-next-btn');
+
+      if (questionEl) questionEl.textContent = data.question;
+      if (progressLabel) progressLabel.textContent = 'Câu ' + (currentQuestion + 1) + ' / ' + QUIZ_DATA.length;
+      if (progressBar) {
+        var pct = ((currentQuestion) / QUIZ_DATA.length) * 100;
+        progressBar.style.width = pct + '%';
+      }
+      if (feedbackEl) {
+        feedbackEl.textContent = '';
+        feedbackEl.className = 'quiz-feedback';
+      }
+      if (nextBtn) {
+        nextBtn.disabled = !answered[currentQuestion];
+        nextBtn.textContent = currentQuestion === QUIZ_DATA.length - 1 ? 'Xem kết quả' : 'Câu tiếp theo';
+      }
+
+      selectedIndex = answered[currentQuestion] ? answered[currentQuestion].selected : null;
+
+      if (optionsContainer) {
+        optionsContainer.innerHTML = '';
+        data.options.forEach(function (optText, idx) {
+          var optBtn = document.createElement('button');
+          optBtn.type = 'button';
+          optBtn.className = 'quiz-option-btn';
+          optBtn.setAttribute('data-index', String(idx));
+          optBtn.textContent = optText;
+
+          if (answered[currentQuestion]) {
+            optBtn.disabled = true;
+            if (idx === data.correctIndex) {
+              optBtn.classList.add('quiz-option-correct');
+            } else if (idx === selectedIndex) {
+              optBtn.classList.add('quiz-option-incorrect');
+            }
+          }
+
+          optBtn.addEventListener('click', function () {
+            handleAnswer(idx);
+          });
+
+          optionsContainer.appendChild(optBtn);
+        });
+      }
+
+      if (answered[currentQuestion]) {
+        showFeedback(answered[currentQuestion].selected === data.correctIndex);
+      }
+    } catch (err) {
+      console.error('Loi hien thi cau hoi:', err);
+    }
+  }
+
+  function showFeedback(isCorrect) {
+    try {
+      var data = QUIZ_DATA[currentQuestion];
+      var feedbackEl = qs('quiz-feedback');
+      if (!feedbackEl || !data) return;
+
+      if (isCorrect) {
+        feedbackEl.textContent = 'Chính xác! ' + data.explanationCorrect;
+        feedbackEl.className = 'quiz-feedback quiz-feedback-correct';
+      } else {
+        feedbackEl.textContent = 'Chưa đúng. ' + data.explanationIncorrect;
+        feedbackEl.className = 'quiz-feedback quiz-feedback-incorrect';
+      }
+    } catch (err) {
+      console.error('Loi hien thi phan hoi:', err);
+    }
+  }
+
+  function handleAnswer(idx) {
+    try {
+      if (answered[currentQuestion]) return; // da tra loi roi, khoa lai
+
+      var data = QUIZ_DATA[currentQuestion];
+      if (!data) return;
+
+      var isCorrect = idx === data.correctIndex;
+      answered[currentQuestion] = { selected: idx, correct: isCorrect };
+
+      if (isCorrect) {
+        score += 1;
+      }
+
+      var scoreEl = qs('quiz-score-live');
+      if (scoreEl) scoreEl.textContent = 'Điểm: ' + score + ' / ' + QUIZ_DATA.length;
+
+      renderQuestion();
+    } catch (err) {
+      console.error('Loi xu ly cau tra loi:', err);
+    }
+  }
+
+  function showResults() {
+    try {
+      var quizBody = qs('quiz-body');
+      var resultBody = qs('quiz-result');
+      if (quizBody) quizBody.style.display = 'none';
+      if (resultBody) resultBody.style.display = 'block';
+
+      var resultScoreEl = qs('quiz-final-score');
+      var resultMsgEl = qs('quiz-final-message');
+      var progressBar = qs('quiz-progress-bar');
+      var progressLabel = qs('quiz-progress-label');
+
+      if (progressBar) progressBar.style.width = '100%';
+      if (progressLabel) progressLabel.textContent = 'Hoàn thành';
+
+      if (resultScoreEl) {
+        resultScoreEl.textContent = score + ' / ' + QUIZ_DATA.length;
+      }
+
+      if (resultMsgEl) {
+        var msg;
+        if (score === QUIZ_DATA.length) {
+          msg = 'Xuất sắc! Em đã nắm rất vững về điểm nhìn và trần thuật trong "Vợ nhặt".';
+        } else if (score >= 3) {
+          msg = 'Khá tốt! Em nên xem lại phần giải thích ở những câu chưa đúng.';
+        } else {
+          msg = 'Em nên quay lại phần Kiến thức mới, đặc biệt mục về điểm nhìn và giọng điệu, rồi thử lại nhé.';
+        }
+        resultMsgEl.textContent = msg;
+      }
+
+      var summaryScoreEl = qs('summary-quiz-score-display');
+      if (summaryScoreEl) {
+        summaryScoreEl.textContent = score + ' / ' + QUIZ_DATA.length + ' câu đúng.';
+      }
+    } catch (err) {
+      console.error('Loi hien thi ket qua:', err);
+    }
+  }
+
+  function resetQuiz() {
+    try {
+      currentQuestion = 0;
+      score = 0;
+      answered = [];
+      selectedIndex = null;
+
+      var quizBody = qs('quiz-body');
+      var resultBody = qs('quiz-result');
+      if (quizBody) quizBody.style.display = 'block';
+      if (resultBody) resultBody.style.display = 'none';
+
+      var scoreEl = qs('quiz-score-live');
+      if (scoreEl) scoreEl.textContent = 'Điểm: 0 / ' + QUIZ_DATA.length;
+
+      var summaryScoreEl = qs('summary-quiz-score-display');
+      if (summaryScoreEl) {
+        summaryScoreEl.textContent = 'Hãy hoàn thành phần Luyện tập ở mục 6 để xem điểm tại đây.';
+      }
+
+      renderQuestion();
+    } catch (err) {
+      console.error('Loi lam lai bai luyen tap:', err);
+    }
+  }
+
+  function initQuiz() {
+    try {
+      var nextBtn = qs('quiz-next-btn');
+      var restartBtn = qs('quiz-restart-btn');
+      var resultRestartBtn = qs('quiz-result-restart-btn');
+
+      if (!nextBtn && !restartBtn && !resultRestartBtn) return;
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          try {
+            if (!answered[currentQuestion]) return;
+            if (currentQuestion < QUIZ_DATA.length - 1) {
+              currentQuestion += 1;
+              renderQuestion();
+            } else {
+              showResults();
+            }
+          } catch (innerErr) {
+            console.error('Loi chuyen cau tiep theo:', innerErr);
+          }
+        });
+      }
+
+      if (restartBtn) {
+        restartBtn.addEventListener('click', function () {
+          resetQuiz();
+        });
+      }
+
+      if (resultRestartBtn) {
+        resultRestartBtn.addEventListener('click', function () {
+          resetQuiz();
+        });
+      }
+
+      var scoreEl = qs('quiz-score-live');
+      if (scoreEl) scoreEl.textContent = 'Điểm: 0 / ' + QUIZ_DATA.length;
+
+      renderQuestion();
+    } catch (err) {
+      console.error('Loi khoi tao bai luyen tap:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initQuiz);
+  } else {
+    initQuiz();
+  }
+})();
+
+</script>
+
+<!-- SCRIPT 5: CONG CU GIAO VIEN -->
+<script>
+// ============ SCRIPT 5: CONG CU GIAO VIEN - VONG QUAY GOI HOC SINH ============
+(function () {
+  'use strict';
+
+  var NEWLINE = String.fromCharCode(10);
+  var CARRIAGE_RETURN = String.fromCharCode(13);
+
+  var studentList = [];
+  var remainingPool = [];
+  var history = [];
+  var isSpinning = false;
+
+  function qs(id) {
+    return document.getElementById(id);
+  }
+
+  function parseNames(raw) {
+    if (!raw) return [];
+    var cleaned = raw.replaceAll(CARRIAGE_RETURN, '');
+    var parts = cleaned.split(NEWLINE);
+    var names = [];
+    for (var i = 0; i < parts.length; i++) {
+      var trimmed = parts[i].trim();
+      if (trimmed.length > 0) {
+        names.push(trimmed);
+      }
+    }
+    return names;
+  }
+
+  function renderHistory() {
+    try {
+      var historyEl = qs('caller-history-list');
+      if (!historyEl) return;
+
+      historyEl.innerHTML = '';
+      if (history.length === 0) {
+        var emptyItem = document.createElement('li');
+        emptyItem.textContent = 'Chưa có lượt gọi nào.';
+        emptyItem.className = 'caller-history-empty';
+        historyEl.appendChild(emptyItem);
+        return;
+      }
+
+      for (var i = history.length - 1; i >= 0; i--) {
+        var item = document.createElement('li');
+        item.textContent = (history.length - i) + '. ' + history[i];
+        historyEl.appendChild(item);
+      }
+    } catch (err) {
+      console.error('Loi hien thi lich su goi ten:', err);
+    }
+  }
+
+  function renderPoolStatus() {
+    try {
+      var statusEl = qs('caller-pool-status');
+      if (!statusEl) return;
+
+      if (studentList.length === 0) {
+        statusEl.textContent = 'Chưa có danh sách học sinh. Hãy nhập danh sách bên dưới.';
+        return;
+      }
+
+      statusEl.textContent = 'Còn lại ' + remainingPool.length + ' / ' + studentList.length + ' học sinh chưa được gọi trong vòng này.';
+    } catch (err) {
+      console.error('Loi hien thi trang thai:', err);
+    }
+  }
+
+  function setResultDisplay(text) {
+    var resultEl = qs('caller-result-display');
+    if (resultEl) resultEl.textContent = text;
+  }
+
+  function loadList() {
+    try {
+      var textarea = qs('caller-name-input');
+      if (!textarea) return;
+
+      var names = parseNames(textarea.value);
+
+      if (names.length === 0) {
+        setResultDisplay('Vui lòng nhập ít nhất một tên học sinh.');
+        return;
+      }
+
+      studentList = names;
+      remainingPool = names.slice();
+      history = [];
+
+      setResultDisplay('Đã nạp ' + names.length + ' học sinh. Bấm "Quay ngẫu nhiên" để bắt đầu.');
+      renderHistory();
+      renderPoolStatus();
+
+      var spinBtn = qs('caller-spin-btn');
+      if (spinBtn) spinBtn.disabled = false;
+    } catch (err) {
+      console.error('Loi nap danh sach:', err);
+      setResultDisplay('Đã xảy ra lỗi khi nạp danh sách. Vui lòng thử lại.');
+    }
+  }
+
+  function spin() {
+    var spinBtn = qs('caller-spin-btn');
+    try {
+      if (isSpinning) return;
+      if (studentList.length === 0) {
+        setResultDisplay('Chưa có danh sách học sinh. Hãy nhập và bấm "Nạp danh sách" trước.');
+        return;
+      }
+
+      if (remainingPool.length === 0) {
+        setResultDisplay('Tất cả học sinh đã được gọi trong vòng này. Bấm "Đặt lại lượt gọi" để bắt đầu vòng mới.');
+        return;
+      }
+
+      isSpinning = true;
+      if (spinBtn) spinBtn.disabled = true;
+      setResultDisplay('Đang quay...');
+
+      window.setTimeout(function () {
+        try {
+          var randomIdx = Math.floor(Math.random() * remainingPool.length);
+          var chosen = remainingPool[randomIdx];
+
+          remainingPool.splice(randomIdx, 1);
+          history.push(chosen);
+
+          setResultDisplay(chosen);
+          renderHistory();
+          renderPoolStatus();
+        } catch (innerErr) {
+          console.error('Loi khi chon ten:', innerErr);
+          setResultDisplay('Đã xảy ra lỗi khi quay. Vui lòng thử lại.');
+        } finally {
+          isSpinning = false;
+          if (spinBtn) spinBtn.disabled = false;
+        }
+      }, 600);
+    } catch (err) {
+      console.error('Loi quay ngau nhien:', err);
+      isSpinning = false;
+      if (spinBtn) spinBtn.disabled = false;
+    }
+  }
+
+  function resetRound() {
+    try {
+      remainingPool = studentList.slice();
+      history = [];
+      setResultDisplay(studentList.length > 0 ? 'Đã đặt lại lượt gọi. Bấm "Quay ngẫu nhiên" để bắt đầu.' : 'Chưa có danh sách học sinh.');
+      renderHistory();
+      renderPoolStatus();
+    } catch (err) {
+      console.error('Loi dat lai luot goi:', err);
+    }
+  }
+
+  function initCaller() {
+    try {
+      var loadBtn = qs('caller-load-btn');
+      var spinBtn = qs('caller-spin-btn');
+      var resetBtn = qs('caller-reset-btn');
+
+      if (!loadBtn && !spinBtn && !resetBtn) return;
+
+      if (loadBtn) {
+        loadBtn.addEventListener('click', function () {
+          loadList();
+        });
+      }
+
+      if (spinBtn) {
+        spinBtn.addEventListener('click', function () {
+          spin();
+        });
+        spinBtn.disabled = true;
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          resetRound();
+        });
+      }
+
+      renderHistory();
+      renderPoolStatus();
+    } catch (err) {
+      console.error('Loi khoi tao cong cu goi ten:', err);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCaller);
+  } else {
+    initCaller();
+  }
+})();
+
+</script>
+</body>
+</html>

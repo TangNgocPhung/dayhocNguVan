@@ -123,6 +123,27 @@
   }
   .semester-count { font-family: var(--font-mono); font-size: 0.82rem; color: var(--ink-muted); }
 
+  .lesson-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.85rem; }
+  .lesson-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    padding: 1.1rem 1.3rem; box-shadow: var(--shadow);
+  }
+  .lesson-item-index {
+    display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+    letter-spacing: 0.08em; color: var(--accent-1); margin-bottom: 0.35rem;
+  }
+  .lesson-item-title { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; margin: 0 0 0.35rem; }
+  .lesson-item-desc { margin: 0; font-size: 0.88rem; color: var(--ink-muted); max-width: 56ch; line-height: 1.55; }
+  .lesson-item-link {
+    flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+    min-height: 2.4rem; padding: 0.6rem 1.05rem; border: 1px solid var(--accent-1); border-radius: 9px;
+    background: var(--accent-1); color: var(--on-accent); font-size: 0.82rem; font-weight: 600;
+    text-decoration: none; transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .lesson-item-link:hover { transform: translateY(-1px); box-shadow: 0 7px 14px -10px var(--accent-1); }
+  .lesson-item-link:focus-visible { outline: 2px solid var(--accent-1); outline-offset: 2px; }
+
   .empty-state {
     display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.85rem;
     padding: 2.5rem 1.5rem; border: 1px dashed var(--border); border-radius: 14px;
@@ -175,7 +196,7 @@
     <h1 class="masthead-title">Bài giảng Ngữ Văn 11</h1>
     <p class="masthead-sub">Danh sách bài học Ngữ văn 11 sẽ được cập nhật dần theo từng học kỳ. Mỗi bài có bài giảng sẽ hiện nút "Mở bài giảng" ngay tại đây.</p>
     <div class="summary-strip">
-      <span class="summary-pill">Học kỳ 1 · <strong>Đang cập nhật</strong></span>
+      <span class="summary-pill">Học kỳ 1 · <strong>1 bài</strong></span>
       <span class="summary-pill">Học kỳ 2 · <strong>Đang cập nhật</strong></span>
     </div>
   </header>
@@ -183,11 +204,18 @@
   <section class="semester-block" id="hk1">
     <div class="semester-head">
       <h2>Học kỳ 1</h2>
+      <span class="semester-count">1 bài</span>
     </div>
-    <div class="empty-state">
-      <span class="empty-state-icon"><svg aria-hidden="true"><use href="#icon-pencil"></use></svg></span>
-      <p>Danh sách bài giảng Học kỳ 1 đang được biên soạn và sẽ sớm được cập nhật tại đây.</p>
-    </div>
+    <ul class="lesson-list">
+      <li class="lesson-item">
+        <div class="lesson-item-main">
+          <span class="lesson-item-index">Văn bản 1</span>
+          <h3 class="lesson-item-title">Vợ Nhặt — Kim Lân</h3>
+          <p class="lesson-item-desc">Câu chuyện và điểm nhìn trong truyện kể: tình huống truyện, bố cục, điểm nhìn — lời kể — giọng điệu, kèm mô phỏng tương tác và luyện tập trắc nghiệm.</p>
+        </div>
+        <a class="lesson-item-link" href="ngu-van-11/hk1/vo-nhat.html" target="_blank" rel="noopener">Mở bài giảng</a>
+      </li>
+    </ul>
   </section>
 
   <section class="semester-block" id="hk2">
